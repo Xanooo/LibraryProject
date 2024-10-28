@@ -1,4 +1,4 @@
-package com.example.project.classes;
+package com.example.project.models;
 
 public class Livre {
     private String titre;

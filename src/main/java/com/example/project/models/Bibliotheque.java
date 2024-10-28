@@ -1,6 +1,5 @@
-package com.example.project.classes;
+package com.example.project.models;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Bibliotheque {

@@ -1,7 +1,6 @@
-package com.example.project.classes;
+package com.example.project.models;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Emprunt {
     private Utilisateur utilisateur;

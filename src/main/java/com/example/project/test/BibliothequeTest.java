@@ -1,8 +1,8 @@
 package com.example.project.test;
 
-import com.example.project.classes.Bibliotheque;
-import com.example.project.classes.Livre;
-import com.example.project.classes.Utilisateur;
+import com.example.project.models.Bibliotheque;
+import com.example.project.models.Livre;
+import com.example.project.models.Utilisateur;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
