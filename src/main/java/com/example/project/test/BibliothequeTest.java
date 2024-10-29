@@ -14,8 +14,9 @@ public class BibliothequeTest {
     Utilisateur utilisateur;
     Livre livre;
 
-    /*
-    Fonction de set-up permettant d'instancier les classes.
+    /**
+     *
+     * @throws Exception
      */
     @Before
     public void setUp() throws Exception {
@@ -33,8 +34,8 @@ public class BibliothequeTest {
         assertEquals("Identifiant: 1\nTitre: Manon Lescaut\nAuteur: Alfred de Musset\nDisponibilité: disponible\n", bibliotheque.afficherLivre());
     }
 
-    /*
-    Fonction de com.example.project.test permettant de vérifier si la suppression d'un livre est effectuée.
+    /**
+     * Fonction de com.example.project.test permettant de vérifier si la suppression d'un livre est effectuée.
      */
     @Test
     public void deleteLivreTest(){
@@ -42,8 +43,8 @@ public class BibliothequeTest {
         assertEquals("Aucun livre n'est présent dans la bibliothèque !", bibliotheque.afficherLivre());
     }
 
-    /*
-    Fonction de com.example.project.test permettant de vérifier si l'ajout d'un utilisateur est effectué.
+    /**
+     *
      */
     @Test
     public void ajoutUtilisateurTest(){
@@ -51,8 +52,8 @@ public class BibliothequeTest {
         assertEquals("ID: 1\nNom: Tamine\nPrénom: Cyril\nEmail: xano@gmail.com", bibliotheque.afficherUtilisateur());
     }
 
-    /*
-    Fonction de com.example.project.test permettant de vérifier si la suppression d'un utilisateur est effectuée.
+    /**
+     * Fonction de com.example.project.test permettant de vérifier si la suppression d'un utilisateur est effectuée.
      */
     @Test
     public void deleteUtilisateurTest(){

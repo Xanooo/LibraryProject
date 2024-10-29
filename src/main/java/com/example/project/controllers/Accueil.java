@@ -12,7 +12,10 @@ import java.io.IOException;
 
 public class Accueil {
 
-
+    /**
+     *
+     * @param event
+     */
     public void onGestionLivresButtonClick(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/project/fxml/gestionLivrePage.fxml"));
@@ -30,12 +33,15 @@ public class Accueil {
         }
     }
 
+    /**
+     *
+     * @param event
+     */
     public void onGestionUtilisateurButtonClick(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/project/fxml/gestionLivrePage.fxml"));
             Parent libraryView = loader.load();
 
-            // Créer une nouvelle scène
             Scene libraryScene = new Scene(libraryView);
             Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
             stage.setWidth(400);
@@ -47,6 +53,10 @@ public class Accueil {
         }
     }
 
+    /**
+     *
+     * @param event
+     */
     public void closeActionButtonClick(ActionEvent event) {
         Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
         stage.close();

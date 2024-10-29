@@ -8,7 +8,14 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+// Classe abstraite permettant de regrouper des fonctions communes aux autres contrôleurs, tel que le retour au menu.
+
 public abstract class Controller {
+
+    /**
+     *
+     * @param event
+     */
     public void onRetourButtonClick(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/project/fxml/mainPage.fxml"));
