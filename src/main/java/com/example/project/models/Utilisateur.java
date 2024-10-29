@@ -1,31 +1,51 @@
 package com.example.project.models;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 public class Utilisateur {
-    private String nom;
-    private int id_utilisateur;
+    private final IntegerProperty idUtilisateur;
+    private final StringProperty nom;
+    private final StringProperty prenom;
+    private final StringProperty email;
 
-    public Utilisateur(String nom, int id_utilisateur) {
-        this.nom = nom;
-        this.id_utilisateur = id_utilisateur;
+    /**
+     *
+     * @param idUtilisateur
+     * @param nom
+     * @param prenom
+     * @param email
+     */
+    public Utilisateur(int idUtilisateur, String nom, String prenom, String email) {
+        this.idUtilisateur = new SimpleIntegerProperty(idUtilisateur);
+        this.nom = new SimpleStringProperty(nom);
+        this.prenom = new SimpleStringProperty(prenom);
+        this.email = new SimpleStringProperty(email);
     }
 
-    public String getNom() {
-        return nom;
-    }
+    // Getters pour les propriétés JavaFX
+    public IntegerProperty idUtilisateurProperty() { return idUtilisateur; }
+    public StringProperty nomProperty() { return nom; }
+    public StringProperty prenomProperty() { return prenom; }
+    public StringProperty emailProperty() { return email; }
 
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
+    // Getters et setters standards
+    public int getIdUtilisateur() { return idUtilisateur.get(); }
+    public void setIdUtilisateur(int id) { this.idUtilisateur.set(id); }
 
-    public int getId_utilisateur() {
-        return id_utilisateur;
-    }
+    public String getNom() { return nom.get(); }
+    public void setNom(String nom) { this.nom.set(nom); }
 
-    public void setId_utilisateur(int id_utilisateur) {
-        this.id_utilisateur = id_utilisateur;
-    }
+    public String getPrenom() { return prenom.get(); }
+    public void setPrenom(String prenom) { this.prenom.set(prenom); }
 
-    public String toString(){
-        return "Identifiant: " + id_utilisateur + "\nNom: " + nom + "\n";
+    public String getEmail() { return email.get(); }
+    public void setEmail(String email) { this.email.set(email); }
+
+    @Override
+    public String toString() {
+        return "ID: " + idUtilisateur.get() + "\nNom: " + nom.get() + "\nPrénom: " + prenom.get() + "\nEmail: " + email.get();
     }
 }

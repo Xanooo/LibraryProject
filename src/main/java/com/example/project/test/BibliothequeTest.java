@@ -21,7 +21,7 @@ public class BibliothequeTest {
     public void setUp() throws Exception {
         bibliotheque = new Bibliotheque();
         livre = new Livre("Manon Lescaut", "Alfred de Musset", true, 1);
-        utilisateur = new Utilisateur("Arris", 1);
+        utilisateur = new Utilisateur(1, "Tamine", "Cyril", "xano@gmail.com");
     }
 
     /**
@@ -48,7 +48,7 @@ public class BibliothequeTest {
     @Test
     public void ajoutUtilisateurTest(){
         bibliotheque.ajoutUtilisateur(utilisateur);
-        assertEquals("Identifiant: 1\nNom: Arris\n", bibliotheque.afficherUtilisateur());
+        assertEquals("ID: 1\nNom: Tamine\nPrénom: Cyril\nEmail: xano@gmail.com", bibliotheque.afficherUtilisateur());
     }
 
     /*
