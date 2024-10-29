@@ -8,4 +8,6 @@ module com.example.project {
     exports com.example.project;
 
     opens com.example.project.test to junit;
+    exports com.example.project.controllers;
+    opens com.example.project.controllers to javafx.fxml;
 }
