@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="353.0" prefWidth="216.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.example.project.controllers.HelloController">
+<VBox alignment="CENTER" prefHeight="353.0" prefWidth="216.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.example.project.controllers.Accueil">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -15,9 +15,10 @@
         <font><Font size="15.0"/> </font>
     </Label>
     <Button onAction="#onGestionLivresButtonClick" text="Gestion des livres" />
-    <Button text="Gestion des utilisateurs" />
+    <Button onAction="#onGestionUtilisateurButtonClick" text="Gestion des utilisateurs" />
     <Button text="Gestion des emprunts" />
     <Button text="Gestion des catégories" />
+    <Button onAction="#closeActionButtonClick" text="Quitter" />
     <Label fx:id="credits" text="Projet développé par Xano, 2024." underline="true">
       <font>
          <Font size="9.0" />
