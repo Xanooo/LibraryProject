@@ -11,13 +11,12 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
 
-    <Label fx:id="welcomeText" text="Gestion des utilisateurs" >
+    <Label fx:id="welcomeText" text="Ajout d'un livre" >
         <font><Font size="15.0"/> </font>
     </Label>
-    <Button onAction="#onAddButtonClick" text="Ajouter un livre" />
-    <Button text="Modifier un livre" />
-    <Button text="Supprimer un livre" />
+    <Button onAction="#onRetourGestionLivre" text="Retour à la gestion des livres" />
     <Button onAction="#onRetourButtonClick" text="Retour à l'accueil" />
+    <Button text="Ajouter" />
     <Label fx:id="credits" text="Projet développé par Xano, 2024." underline="true">
         <font>
             <Font size="9.0" />

@@ -19,7 +19,7 @@
     </Label>
     <Button onAction="#onGestionLivresButtonClick" text="Gestion des livres" />
     <Button onAction="#onGestionUtilisateurButtonClick" text="Gestion des utilisateurs" />
-    <Button text="Gestion des emprunts" />
+    <Button onAction="#onGestionEmpruntButtonClick" text="Gestion des emprunts" />
     <Button text="Gestion des catégories" />
     <Button onAction="#closeActionButtonClick" text="Quitter" />
     <Label fx:id="credits" text="Projet développé par Xano, 2024." underline="true">
