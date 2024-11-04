@@ -1,5 +1,6 @@
 package com.example.project.utils;
 
+import com.example.project.AccueilApp;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
@@ -14,9 +15,20 @@ public class GestionAffichageVue {
 
     private Stage primaryStage;
 
-    public GestionAffichageVue(Stage primaryStage) {
+    public GestionAffichageVue(){
+
+    }
+    public void setPrimaryStage(Stage primaryStage) {
         this.primaryStage = primaryStage;
     }
+    public void affichageMain(Stage stage, String lienFXML) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(AccueilApp.class.getResource(lienFXML));
+        Scene scene = new Scene(fxmlLoader.load(), 400, 700);
+        stage.setTitle("LibraryApp");
+        stage.setScene(scene);
+        stage.show();
+    }
+
 
     public void affichageVue(ActionEvent actionEvent, String lienFXML) {
         try {

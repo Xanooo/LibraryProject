@@ -18,11 +18,13 @@ import java.io.IOException;
 public class GestionLivreController extends Controller{
 
 
-    private GestionAffichageVue gestionAffichageVue;
+    private final GestionAffichageVue gestionAffichageVue;
 
-    public GestionLivreController (GestionAffichageVue gestionAffichage){
-        this.gestionAffichageVue = gestionAffichage;
+    public GestionLivreController(){
+        gestionAffichageVue = new GestionAffichageVue();
     }
+
+
     @FXML
     TextField titreLivre;
 
