@@ -20,22 +20,24 @@ public class BibliothequeTest {
      */
     @Before
     public void setUp() throws Exception {
+        Livre.resetIDL();
+        Utilisateur.resetIDU();
         bibliotheque = new Bibliotheque();
-        livre = new Livre("Manon Lescaut", "Alfred de Musset", true, 1);
-        utilisateur = new Utilisateur(1, "Tamine", "Cyril", "xano@gmail.com");
+        livre = new Livre("Manon Lescaut", "Alfred de Musset");
+        utilisateur = new Utilisateur("Xano", "xano@gmail.com");
     }
 
     /**
-     * Fonction de com.example.project.test
+     * Fonction de test permettant de vérifier qu'un ajout de livre a été effectué
      */
     @Test
     public void ajoutLivreTest() {
         bibliotheque.ajoutLivre(livre);
-        assertEquals("Identifiant: 1\nTitre: Manon Lescaut\nAuteur: Alfred de Musset\nDisponibilité: disponible\n", bibliotheque.afficherLivre());
+        assertEquals("Identifiant: 1\nTitre: Manon Lescaut\nAuteur: Alfred de Musset\nDisponibilité: Disponible\n", bibliotheque.afficherLivre());
     }
 
     /**
-     * Fonction de com.example.project.test permettant de vérifier si la suppression d'un livre est effectuée.
+     * Fonction permettant de vérifier si la suppression d'un livre est effectuée.
      */
     @Test
     public void deleteLivreTest(){
@@ -44,16 +46,16 @@ public class BibliothequeTest {
     }
 
     /**
-     *
+     * Fonction de test permettant de vérifier qu'un utilisateur a été ajouté.
      */
     @Test
     public void ajoutUtilisateurTest(){
         bibliotheque.ajoutUtilisateur(utilisateur);
-        assertEquals("ID: 1\nNom: Tamine\nPrénom: Cyril\nEmail: xano@gmail.com", bibliotheque.afficherUtilisateur());
+        assertEquals("ID: 1\nNom: Xano\nEmail: xano@gmail.com", bibliotheque.afficherUtilisateur());
     }
 
     /**
-     * Fonction de com.example.project.test permettant de vérifier si la suppression d'un utilisateur est effectuée.
+     * Fonction de test permettant de vérifier si la suppression d'un utilisateur est effectuée.
      */
     @Test
     public void deleteUtilisateurTest(){

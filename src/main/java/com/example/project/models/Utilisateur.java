@@ -7,23 +7,21 @@ import javafx.beans.property.StringProperty;
 
 
 public class Utilisateur {
+    private static int IDU = 1;
     private final IntegerProperty idUtilisateur;
     private final StringProperty nom;
-    private final StringProperty prenom;
     private final StringProperty email;
 
     /**
-     *
-     * @param idUtilisateur
-     * @param nom
-     * @param prenom
-     * @param email
+     * Le constructeur de notre classe Utilisateur
+     * @param nom : le nom de l'utilisateur
+     * @param email : l'email de l'utilisateur
      */
-    public Utilisateur(int idUtilisateur, String nom, String prenom, String email) {
-        this.idUtilisateur = new SimpleIntegerProperty(idUtilisateur);
+    public Utilisateur(String nom, String email) {
+        this.idUtilisateur = new SimpleIntegerProperty(IDU);
         this.nom = new SimpleStringProperty(nom);
-        this.prenom = new SimpleStringProperty(prenom);
         this.email = new SimpleStringProperty(email);
+        IDU++;
     }
 
     /**
@@ -38,11 +36,6 @@ public class Utilisateur {
      */
     public StringProperty nomProperty() { return nom; }
 
-    /**
-     *
-     * @return
-     */
-    public StringProperty prenomProperty() { return prenom; }
 
     /**
      *
@@ -71,40 +64,35 @@ public class Utilisateur {
 
     /**
      *
-     * @param nom
+     * @param nom : nouveau nom de l'utilisateur
      */
     public void setNom(String nom) { this.nom.set(nom); }
 
     /**
-     *
-     * @return
-     */
-    public String getPrenom() { return prenom.get(); }
-
-    /**
-     *
-     * @param prenom
-     */
-    public void setPrenom(String prenom) { this.prenom.set(prenom); }
-
-    /**
-     *
-     * @return
+     * Fonction renvoyant l'email de l'utilisateur
+     * @return : renvoie l'email de l'utilisateur
      */
     public String getEmail() { return email.get(); }
 
     /**
-     *
-     * @param email
+     * Met à jour l'email de l'utilisateur
+     * @param email : notre nouvel email
      */
     public void setEmail(String email) { this.email.set(email); }
 
     /**
-     *
-     * @return
+     * Fonction affichant les informations d'un utilisateyr
+     * @return : un string contenant le nom, l'email et l'identifiant d'un utilisateur
      */
     @Override
     public String toString() {
-        return "ID: " + idUtilisateur.get() + "\nNom: " + nom.get() + "\nPrénom: " + prenom.get() + "\nEmail: " + email.get();
+        return "ID: " + idUtilisateur.get() + "\nNom: " + nom.get()  + "\nEmail: " + email.get();
+    }
+
+    /**
+     *
+     */
+    public static void resetIDU(){
+        IDU = 1;
     }
 }

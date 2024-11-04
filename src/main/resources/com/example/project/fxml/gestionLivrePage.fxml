@@ -15,7 +15,7 @@
         <font><Font size="15.0"/> </font>
     </Label>
     <Button onAction="#onAddButtonClick" text="Ajouter un livre" />
-    <Button text="Modifier un livre" />
+    <Button onAction="#onEditButtonClick" text="Modifier un livre" />
     <Button text="Supprimer un livre" />
     <Button onAction="#onRetourButtonClick" text="Retour à l'accueil" />
     <Label fx:id="credits" text="Projet développé par Xano, 2024." underline="true">

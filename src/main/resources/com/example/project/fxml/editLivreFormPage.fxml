@@ -13,19 +13,19 @@
     <Label fx:id="welcomeText" text="Ajout d'un livre">
         <font><Font size="15.0" /> </font>
     </Label>
-    <Label  text="Titre du livre" />
-    <TextField fx:id="titreLivre" promptText="Ecrivez votre titre ici" />
-    <Label  text="Auteur du livre" />
-    <TextField fx:id="auteurLivre" promptText="Ecrivez votre auteur ici" />
+    <Label text="Titre du livre" />
+    <TextField />
+    <Label text="Auteur du livre" />
+    <TextField />
 
-   <HBox prefHeight="100.0" prefWidth="200.0">
-      <children>
-          <Button onAction="#onRetourGestionLivre" text="Retour à la gestion des livres" />
-          <Button onAction="#onRetourButtonClick" text="Retour à l'accueil" />
-          <Button onAction="#handleAddBook" text="Ajouter" />
+    <HBox prefHeight="100.0" prefWidth="200.0">
+        <children>
+            <Button onAction="#onRetourGestionLivre" text="Retour à la gestion des livres" />
+            <Button onAction="#onRetourButtonClick" text="Retour à l'accueil" />
+            <Button text="Modifier" />
 
-      </children>
-   </HBox>
+        </children>
+    </HBox>
     <Label fx:id="credits" text="Projet développé par Xano, 2024." underline="true">
         <font>
             <Font size="9.0" />

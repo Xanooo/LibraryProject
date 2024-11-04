@@ -13,8 +13,8 @@ import java.io.IOException;
 public class Accueil {
 
     /**
-     *
-     * @param event
+     * Permet d'accéder à la page de gestion des livres
+     * @param event : un évènement
      */
     public void onGestionLivresButtonClick(ActionEvent event) {
         try {
@@ -34,8 +34,8 @@ public class Accueil {
     }
 
     /**
-     *
-     * @param event
+     * Permet d'accéder à la page de gestion des utilisateurs.
+     * @param event : un évènement
      */
     public void onGestionUtilisateurButtonClick(ActionEvent event) {
         try {
@@ -54,8 +54,8 @@ public class Accueil {
     }
 
     /**
-     *
-     * @param event
+     * Permet d'accéder à la page de gestion des emprunts.
+     * @param event : un évènement
      */
     public void onGestionEmpruntButtonClick(ActionEvent event) {
         try {
@@ -74,8 +74,8 @@ public class Accueil {
     }
 
     /**
-     *
-     * @param event
+     * Ferme la fenêtre
+     * @param event : un évènement
      */
     public void closeActionButtonClick(ActionEvent event) {
         Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();

@@ -24,7 +24,7 @@ public class Emprunt {
         this.livre = livre;
         this.datePret = new SimpleObjectProperty<>(LocalDate.now());
         this.dateRetour = new SimpleObjectProperty<>(datePret.get().plusDays(14));
-        this.statut = new SimpleStringProperty("Retour");
+        this.statut = new SimpleStringProperty("Disponible");
     }
 
 
@@ -121,10 +121,10 @@ public class Emprunt {
      * @param statut
      */
     public void setStatut(String statut) {
-        if (statut.equals("Prete") || statut.equals("Retour")) {
+        if (statut.equals("Non-disponible") || statut.equals("Disponible")) {
             this.statut.set(statut);
         } else {
-            this.statut.set("Retour");
+            this.statut.set("Disponible");
         }
     }
 
@@ -141,7 +141,7 @@ public class Emprunt {
      */
     public void indiquerRetour() {
         dateRetour.set(LocalDate.now());
-        statut.set("Retour");
+        statut.set("Disponible");
     }
 
     /**

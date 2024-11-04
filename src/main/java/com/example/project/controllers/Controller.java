@@ -13,8 +13,8 @@ import java.io.IOException;
 public abstract class Controller {
 
     /**
-     *
-     * @param event
+     * Permet de retourner à l'accueil
+     * @param event : un évènement
      */
     public void onRetourButtonClick(ActionEvent event) {
         try {

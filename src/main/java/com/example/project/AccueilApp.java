@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class AccueilApp extends Application {
     /**
-     *
+     * Met en place notre scène et notre stage principale, la page d'accueil.
      * @param stage
      * @throws IOException
      */
@@ -23,7 +23,7 @@ public class AccueilApp extends Application {
     }
 
     /**
-     *
+     * Lance le programme
      * @param args
      */
     public static void main(String[] args) {

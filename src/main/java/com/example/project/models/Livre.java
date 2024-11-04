@@ -12,22 +12,20 @@ public class Livre {
     private final StringProperty auteur;
     private final BooleanProperty disponible;
     private final IntegerProperty id_livre;
+    private static int IDL=1;
 
     /**
-     *
-     * @param titre
-     * @param auteur
-     * @param disponible
-     * @param id
+     * Constructeur de la classe Livre
+     * @param titre : titre du livre
+     * @param auteur : auteur d'un livre
      */
-    public Livre(String titre, String auteur, boolean disponible, int id) {
+    public Livre(String titre, String auteur) {
         this.titre = new SimpleStringProperty(titre);
         this.auteur = new SimpleStringProperty(auteur);
-        this.disponible = new SimpleBooleanProperty(disponible);
-        this.id_livre = new SimpleIntegerProperty(id);
+        this.disponible = new SimpleBooleanProperty(true);
+        this.id_livre = new SimpleIntegerProperty(IDL);
+        IDL++;
     }
-
-    // Getters pour les propriétés
 
     /**
      *
@@ -86,8 +84,8 @@ public class Livre {
     public boolean isDisponible() { return disponible.get(); }
 
     /**
-     *
-     * @param disponible
+     * Setter permettant de changer la disponibilité d'un livre
+     * @param disponible : booléen indiquant la disponibilité du livre
      */
     public void setDisponible(boolean disponible) { this.disponible.set(disponible); }
 
@@ -109,7 +107,14 @@ public class Livre {
      */
     @Override
     public String toString() {
-        String dispoFR = disponible.get() ? "disponible" : "non-disponible";
+        String dispoFR = disponible.get() ? "Disponible" : "Non-disponible"; // Permet de convertir le booléen en string
         return "Identifiant: " + id_livre.get() + "\nTitre: " + titre.get() + "\nAuteur: " + auteur.get() + "\nDisponibilité: " + dispoFR + "\n";
+    }
+
+    /**
+     *
+     */
+    public static void resetIDL(){
+        IDL = 1;
     }
 }
