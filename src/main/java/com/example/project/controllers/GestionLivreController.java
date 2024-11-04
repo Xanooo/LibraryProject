@@ -36,7 +36,7 @@ public class GestionLivreController extends Controller{
      * @throws IOException
      */
     public void onAddButtonClick(ActionEvent actionEvent) throws IOException {
-        gestionAffichageVue.affichageVue(actionEvent, "/com/example/project/fxml/ajoutLivreFormPage.fxml.fxml");
+        gestionAffichageVue.affichageVue(actionEvent, "/com/example/project/fxml/ajoutLivreFormPage.fxml");
     }
     /**
      *
@@ -47,20 +47,13 @@ public class GestionLivreController extends Controller{
         gestionAffichageVue.affichageVue(actionEvent, "/com/example/project/fxml/gestionLivrePage.fxml");
     }
 
+    /**
+     *
+     * @param actionEvent
+     * @throws IOException
+     */
     public void onEditButtonClick(ActionEvent actionEvent) throws IOException {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/project/fxml/editLivreFormPage.fxml"));
-            Parent libraryView = loader.load();
-
-            Scene libraryScene = new Scene(libraryView);
-            Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
-            stage.setWidth(400);
-            stage.setHeight(700);
-            stage.setScene(libraryScene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        gestionAffichageVue.affichageVue(actionEvent, "/com/example/project/fxml/editLivreFormPage.fxml");
     }
 
     /**
@@ -72,7 +65,7 @@ public class GestionLivreController extends Controller{
 
         // Si il n'y a aucun titre/utilisateur, afficher une alerte
         if (titre.isEmpty() || auteur.isEmpty()){
-            GestionAlerte.showAlert("Erreur lors de l'ajout du livre", "Titre ou auteur non renseignés", "Veuillez renseigner tous les champs !");
+            GestionAlerte.errorAlert("Erreur lors de l'ajout du livre", "Titre ou auteur non renseignés", "Veuillez renseigner tous les champs !");
             clearFields();
             return;
         }
@@ -82,7 +75,7 @@ public class GestionLivreController extends Controller{
         System.out.println("Livre crée !");
         System.out.println(titre);
         System.out.println(auteur);
-        GestionAlerte.showAlert("Ajout du livre réussi", titre + "\n" + auteur,"Le livre a été ajouté avec succès !");
+        GestionAlerte.successAlert("Ajout du livre réussi", titre + "\n" + auteur,"Le livre a été ajouté avec succès !");
         clearFields();
     }
 

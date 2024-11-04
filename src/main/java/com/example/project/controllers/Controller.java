@@ -25,4 +25,5 @@ public abstract class Controller {
         gestionAffichageVue.affichageVue(event, "/com/example/project/fxml/mainPage.fxml");
 
     }
+
 }

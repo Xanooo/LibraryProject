@@ -13,20 +13,8 @@ import java.io.IOException;
 
 public class GestionAffichageVue {
 
-    private Stage primaryStage;
-
     public GestionAffichageVue(){
 
-    }
-    public void setPrimaryStage(Stage primaryStage) {
-        this.primaryStage = primaryStage;
-    }
-    public void affichageMain(Stage stage, String lienFXML) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(AccueilApp.class.getResource(lienFXML));
-        Scene scene = new Scene(fxmlLoader.load(), 400, 700);
-        stage.setTitle("LibraryApp");
-        stage.setScene(scene);
-        stage.show();
     }
 
 
